@@ -4,14 +4,13 @@ import { styled } from '@mui/material/styles';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
 
-// Estilo para o Card usando styled
 const StyledCard = styled(Card)(({ theme }) => ({
-  backgroundColor: 'white', // cor inicial branca
-  color: theme.palette.primary.main, // cor do texto
-  transition: 'background-color 0.3s, color 0.3s', // transição suave
+  backgroundColor: 'white',
+  color: theme.palette.primary.main, 
+  transition: 'background-color 0.3s, color 0.3s',
   '&:hover': {
-    backgroundColor: theme.palette.secondary.main, // cor ao passar o mouse (verde)
-    color: 'white', // cor do texto ao passar o mouse
+    backgroundColor: theme.palette.secondary.main, 
+    color: 'white', 
   },
 }));
 
@@ -19,7 +18,7 @@ function AboutMe() {
   return (
     <div style={{ padding: '20px' }}>
       <Typography variant="h4" align="center" gutterBottom>
-        About me
+        Sobre mim
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         <Grid item xs={12} sm={6} md={4}>
@@ -27,7 +26,7 @@ function AboutMe() {
             <CardContent>
               <WorkIcon style={{ fontSize: 40 }} />
               <Typography variant="h6" component="div">
-                Experience
+              experiência
               </Typography>
               <Typography variant="body2">
                 1+ years
@@ -43,13 +42,13 @@ function AboutMe() {
             <CardContent>
               <SchoolIcon style={{ fontSize: 40 }} />
               <Typography variant="h6" component="div">
-                Education
+                Formação
               </Typography>
               <Typography variant="body2">
-                Bachelor's Degree
+               Técnico em desenvolvimento de sistemas
               </Typography>
               <Typography variant="body2">
-                Electrical Engineer
+               Programador 
               </Typography>
             </CardContent>
           </StyledCard>
