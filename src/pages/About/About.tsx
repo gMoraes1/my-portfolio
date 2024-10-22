@@ -46,7 +46,7 @@ function AboutMe() {
           </StyledCard>
         </Grid>
       </Grid>
-      <Typography color="primary" variant="h5" textAlign="center" padding = "20px" margin = "5px" // Max-width e auto para centralizar
+      <Typography color="primary" variant="h5" textAlign="center" padding = "24px" margin = "10px" // Max-width e auto para centralizar
       >
         Meu nome é Gustavo, tenho 18 anos e sou estudante de tecnologia, focado
          em desenvolvimento front-end. Tenho habilidades em HTML, CSS e JavaScript, e estou explorando frameworks como React e linguagens back end como python para criar interfaces intuitivas e atraentes. Estou sempre em busca de inspiração nas últimas tendências de design. Meu objetivo é aprimorar minhas habilidades em front-end e contribuir para projetos desafiadores, sonhando em um dia trabalhar em uma grande empresa de tecnologiapara ter mais experiência.
