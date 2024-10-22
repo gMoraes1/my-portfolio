@@ -1,8 +1,9 @@
-function Skill () {
+function Skill() {
+    // componente para aparacer as habilidaes de tecnologias do desenvolvedor
     return (
         <div>
-        Skill
+            <h1>Skill</h1>
         </div>
-    )
+    );
 }
-export default Skill 
+export default Skill;

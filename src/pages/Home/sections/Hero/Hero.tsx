@@ -1,7 +1,6 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.jpg";
 import DownloadIcon from '@mui/icons-material/Download';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LinkedInIcon from '@mui/icons-material/LinkedIn'; // Importando o ícone do LinkedIn
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
