@@ -1,5 +1,5 @@
 
-import { Card, CardContent, Typography, Grid } from '@mui/material';
+import { Card, CardContent, Typography, Grid, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import WorkIcon from '@mui/icons-material/Work';
 import SchoolIcon from '@mui/icons-material/School';
@@ -16,7 +16,8 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 function AboutMe() {
   return (
-    <div style={{ padding: '20px' }}>
+    <Container maxWidth="lg">
+    <div style={{ padding: '10px' }}>
       <Typography variant="h4" align="center" gutterBottom>
         Sobre mim
       </Typography>
@@ -46,12 +47,13 @@ function AboutMe() {
           </StyledCard>
         </Grid>
       </Grid>
-      <Typography color="primary" variant="h5" textAlign="center" padding = "24px" margin = "10px" // Max-width e auto para centralizar
+      <Typography color="primary" variant="h5" marginTop="30px"
       >
-        Meu nome é Gustavo, tenho 18 anos e sou estudante de tecnologia, focado
+            Meu nome é Gustavo, tenho 18 anos e sou estudante de tecnologia, focado
          em desenvolvimento front-end. Tenho habilidades em HTML, CSS e JavaScript, e estou explorando frameworks como React e linguagens back end como python para criar interfaces intuitivas e atraentes. Estou sempre em busca de inspiração nas últimas tendências de design. Meu objetivo é aprimorar minhas habilidades em front-end e contribuir para projetos desafiadores, sonhando em um dia trabalhar em uma grande empresa de tecnologiapara ter mais experiência.
       </Typography>
     </div>
+    </Container>
   );
 }
 

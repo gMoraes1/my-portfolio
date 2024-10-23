@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Grid, styled, Typography } from "@mui/material";
+import { Button, Grid, styled, Typography,Container } from "@mui/material";
 import JavascriptIcon from "@mui/icons-material/Code";
 import TypescriptIcon from "@mui/icons-material/Code";
 import HtmlIcon from "@mui/icons-material/Language";
@@ -8,7 +8,6 @@ import CssIcon from "@mui/icons-material/Style";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode"; // Usando como substituto para Python
 import SqlIcon from "@mui/icons-material/Storage";
 import MuiIcon from "@mui/icons-material/Extension";
-
 const skills = [
   { label: "Javascript", icon: <JavascriptIcon /> },
   { label: "Typescript", icon: <TypescriptIcon /> },
@@ -33,9 +32,11 @@ const StyledButton = styled(Button)(({ theme }) => ({
 function Skill() {
   return (
     <div>
+    <Container maxWidth="lg">
       <Typography color="primary" variant="h2" textAlign="center" pb={3}>
         Habilidades
       </Typography>
+      
       <Grid
         container
         spacing={2}
@@ -65,6 +66,7 @@ function Skill() {
           </Grid>
         ))}
       </Grid>
+    </Container>
     </div>
   );
 }

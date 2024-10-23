@@ -57,7 +57,7 @@ const Hero = () => {
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
                                     <StyledButton onClick={handleLinkedInClick}>
                                         <LinkedInIcon/>
-                                        <Typography>Entre em contato</Typography>
+                                        <Typography>Linkedin</Typography>
                                     </StyledButton>
                                 </Grid>
                             </Grid>
