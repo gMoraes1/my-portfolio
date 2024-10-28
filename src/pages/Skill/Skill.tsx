@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Grid, styled, Typography,Container } from "@mui/material";
 import JavascriptIcon from "@mui/icons-material/Code";
 import TypescriptIcon from "@mui/icons-material/Code";
@@ -33,7 +32,7 @@ function Skill() {
   return (
     <div>
     <Container maxWidth="lg">
-      <Typography color="primary" variant="h2" textAlign="center" pb={3}>
+      <Typography color="primary" variant="h2" textAlign="center" pb={6} marginTop="150px" >
         Habilidades
       </Typography>
       
@@ -42,19 +41,19 @@ function Skill() {
         spacing={2}
         display="flex"
         justifyContent="center"
-        padding="8px"
         alignItems="center"
-        margin="8px"
+        
       >
         {skills.map((skill) => (
           <Grid
             item
             key={skill.label}
-            xs={6}
+            xs={5}
             sm={3}
             display="flex"
-            alignItems="center"
+          alignItems={"center"}
             justifyContent="center"
+          
           >
             <StyledButton
               variant="outlined"

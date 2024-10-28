@@ -16,12 +16,12 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 function AboutMe() {
   return (
-    <Container maxWidth="lg">
-    <div style={{ padding: '10px' }}>
-      <Typography variant="h4" align="center" gutterBottom>
+    <Container maxWidth="lg" >
+    <div style={{ padding: '10px'}}>
+      <Typography variant="h2" align="center"  gutterBottom marginTop='250px' padding='10px'>
         Sobre mim
       </Typography>
-      <Grid container spacing={3} justifyContent="center">
+      <Grid container spacing={3} justifyContent="center" padding='20px'>
         <Grid item xs={12} sm={6} md={4}>
           <StyledCard>
             <CardContent>
@@ -47,7 +47,7 @@ function AboutMe() {
           </StyledCard>
         </Grid>
       </Grid>
-      <Typography color="primary" variant="h5" marginTop="30px"
+      <Typography color="primary" variant="h5" marginTop="40px" padding="20px"
       >
             Meu nome é Gustavo, tenho 18 anos e sou estudante de tecnologia, focado
          em desenvolvimento front-end. Tenho habilidades em HTML, CSS e JavaScript, e estou explorando frameworks como React e linguagens back end como python para criar interfaces intuitivas e atraentes. Estou sempre em busca de inspiração nas últimas tendências de design. Meu objetivo é aprimorar minhas habilidades em front-end e contribuir para projetos desafiadores, sonhando em um dia trabalhar em uma grande empresa de tecnologiapara ter mais experiência.
