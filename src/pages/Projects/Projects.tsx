@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, CardMedia, Typography, Button, styled, Container } from '@mui/material';
+import { Box, Grid, Card, CardContent, CardMedia, Typography, Button, styled, Container, useTheme } from '@mui/material';
 
 const projects = [
   {
@@ -67,6 +67,8 @@ const Hero: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
 };
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  const theme = useTheme();
+
   return (
     <Card sx={{ 
       borderRadius: "8px", 
@@ -77,47 +79,80 @@ const ProjectCard = ({ project }: { project: Project }) => {
       display: "flex", 
       flexDirection: "column", 
       justifyContent: "space-between",
+      backgroundColor: '#f5f5f5', // Fundo cinza para todo o card
     }}>
       <CardMedia
         component="img"
         image={project.image}
         alt={project.title}
         sx={{ 
-          height: "120px", 
+          height: "200px", 
           width: "100%", 
           objectFit: "cover", 
           borderRadius: "4px", 
           marginBottom: "8px",
         }}
       />
-      <CardContent sx={{ flexGrow: 1 }}>
-        <Typography variant="h6" component="div">
+      <CardContent sx={{ 
+        flexGrow: 1, 
+        display: 'flex', 
+        flexDirection: 'column', 
+        justifyContent: 'space-between',
+        padding: '16px',
+      }}>
+        <Typography variant="h6" component="div" sx={{ marginBottom: '8px' }}>
           {project.title}
         </Typography>
-        <Typography variant="body2" color="textSecondary">
+        <Typography variant="body2" color="textSecondary" sx={{ marginBottom: '8px' }}>
           {project.date}
         </Typography>
-        <Typography variant="body2" sx={{ marginTop: "10px", overflow: "hidden", textOverflow: "ellipsis" }}>
+        <Typography variant="body2" sx={{ marginBottom: '8px', overflow: "hidden", textOverflow: "ellipsis" }}>
           {project.description}
-        </Typography>
-        <Typography variant="body2" sx={{ marginTop: "4px", fontStyle: "italic", color: "gray" }}>
+        </Typography> 
+        <Typography variant="body2" sx={{ fontStyle: "italic", color: "gray" }}>
           Technologies: {project.technologies}
         </Typography>
       </CardContent>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: "8px" }}>
         <Button
-          variant="outlined"
           href={project.viewProjectLink}
           target="_blank"
-          size="small"
+          sx={{
+            backgroundColor: "transparent",
+            border: `1px solid ${theme.palette.primary.contrastText}`,
+            borderRadius: "3px",
+            padding: "5px 15px",
+            width: "48%",
+            color: theme.palette.primary.contrastText,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "10px",
+            '&:hover': {
+              backgroundColor: theme.palette.secondary.light,
+            },
+          }}
         >
           View Project
         </Button>
         <Button
-          variant="outlined"
           href={project.viewCodeLink}
           target="_blank"
-          size="small"
+          sx={{
+            backgroundColor: "transparent",
+            border: `1px solid ${theme.palette.primary.contrastText}`,
+            borderRadius: "3px",
+            padding: "5px 15px",
+            width: "48%",
+            color: theme.palette.primary.contrastText,
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "10px",
+            '&:hover': {
+              backgroundColor: theme.palette.secondary.light,
+            },
+          }}
         >
           View Code
         </Button>
@@ -130,7 +165,7 @@ const Projects = () => {
   return (
     <Hero>
       <Container maxWidth="lg" >
-        <Typography variant="h2" color="primary.contrastText" align="center" marginTop='20px' padding='10px'> Projetos </Typography>
+        <Typography variant="h2" color="primary.contrastText" align="center"  marginBottom= '50px'> Projetos </Typography>
         <Box sx={{ padding: "20px" }}>
           <Grid container spacing={4} justifyContent="center">
             {projects.map((project, index) => (
