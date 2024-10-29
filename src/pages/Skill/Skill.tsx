@@ -31,8 +31,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
 function Skill() {
   return (
     <div>
-    <Container maxWidth="lg">
-      <Typography color="primary" variant="h2" textAlign="center" pb={6} marginTop="150px" >
+    <Container maxWidth="lg" sx={{marginBottom:25}}>
+      <Typography color="primary" variant="h2" textAlign="center" pb={5} marginTop="150px" marginBottom="20px" >
         Habilidades
       </Typography>
       
@@ -51,8 +51,11 @@ function Skill() {
             xs={5}
             sm={3}
             display="flex"
-          alignItems={"center"}
+          alignItems="center"
             justifyContent="center"
+            marginBottom="10px"
+         
+
           
           >
             <StyledButton

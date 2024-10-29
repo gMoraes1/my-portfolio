@@ -54,11 +54,13 @@ interface Project {
 const Hero: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
+    width: "100%",
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
-    paddingTop: "200px",
+    paddingTop: "150px",
     paddingBottom: "100px",
+    
   }));
 
   return <StyledHero>{children}</StyledHero>;
@@ -127,7 +129,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 const Projects = () => {
   return (
     <Hero>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" >
         <Typography variant="h2" color="primary.contrastText" align="center" marginTop='20px' padding='10px'> Projetos </Typography>
         <Box sx={{ padding: "20px" }}>
           <Grid container spacing={4} justifyContent="center">
