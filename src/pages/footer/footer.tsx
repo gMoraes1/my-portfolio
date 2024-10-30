@@ -2,6 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Theme, useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import InstagramIcon from '@mui/icons-material/Instagram';
 
 // Estilizando o footer fora do componente
 const StyledFooter = styled('footer')(({ theme }: { theme: Theme }) => ({
@@ -10,6 +13,13 @@ const StyledFooter = styled('footer')(({ theme }: { theme: Theme }) => ({
   marginTop: '40px',
   textAlign: 'center',
 }));
+
+const IconContainer = styled('div')({
+  display: 'flex',
+  justifyContent: 'center',
+  gap: '15px',
+  marginTop: '10px',
+});
 
 function FooterDois() {
   const theme = useTheme();
@@ -20,11 +30,17 @@ function FooterDois() {
       <Typography color="primary" variant="h2" pb={2}>
         Todos os direitos reservados a mim. {currentYear}
       </Typography>
-      <div>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">GitHub</a> | 
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-      </div>
+      <IconContainer>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <LinkedInIcon fontSize="large" />
+        </a>
+        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+          <GitHubIcon fontSize="large" />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <InstagramIcon fontSize="large" />
+        </a>
+      </IconContainer>
       <Typography variant="body1" color="textSecondary">
         Construindo soluções inovadoras para o futuro.
       </Typography>
