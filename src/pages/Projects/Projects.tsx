@@ -1,5 +1,7 @@
 import React from 'react';
-import { Box, Grid, Card, CardContent, CardMedia, Typography, Button, styled, Container, useTheme } from '@mui/material';
+import { Box, Grid, Card, CardContent, CardMedia, Typography, Container, useTheme } from '@mui/material';
+import { styled, Theme } from '@mui/system';
+import StyledButton from '../../components/StyledButton/StyledButton';
 
 const projects = [
   {
@@ -52,7 +54,7 @@ interface Project {
 }
 
 const Hero: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-  const StyledHero = styled("div")(({ theme }) => ({
+  const StyledHero = styled("div")(({ theme }: { theme: Theme }) => ({
     backgroundColor: theme.palette.primary.main,
     width: "100%",
     display: "flex",
@@ -60,7 +62,6 @@ const Hero: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     flexDirection: "column",
     paddingTop: "150px",
     paddingBottom: "100px",
-    
   }));
 
   return <StyledHero>{children}</StyledHero>;
@@ -113,49 +114,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
           Technologies: {project.technologies}
         </Typography>
       </CardContent>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: "8px" }}>
-        <Button
-          href={project.viewProjectLink}
-          target="_blank"
-          sx={{
-            backgroundColor: "transparent",
-            border: `1px solid ${theme.palette.primary.contrastText}`,
-            borderRadius: "3px",
-            padding: "5px 15px",
-            width: "48%",
-            color: theme.palette.primary.contrastText,
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "10px",
-            '&:hover': {
-              backgroundColor: theme.palette.secondary.light,
-            },
-          }}
-        >
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: "8px", background:theme.palette.secondary.main }}>
+        <StyledButton  onClick={() => window.open(project.viewProjectLink, "_blank")}>
           View Project
-        </Button>
-        <Button
-          href={project.viewCodeLink}
-          target="_blank"
-          sx={{
-            backgroundColor: "transparent",
-            border: `1px solid ${theme.palette.primary.contrastText}`,
-            borderRadius: "3px",
-            padding: "5px 15px",
-            width: "48%",
-            color: theme.palette.primary.contrastText,
-            display: "inline-flex",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "10px",
-            '&:hover': {
-              backgroundColor: theme.palette.secondary.light,
-            },
-          }}
-        >
+        </StyledButton>
+        <StyledButton onClick={() => window.open(project.viewCodeLink, "_blank")}>
           View Code
-        </Button>
+        </StyledButton>
       </Box>
     </Card>
   );
@@ -164,12 +129,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
 const Projects = () => {
   return (
     <Hero>
-      <Container maxWidth="lg" >
-        <Typography variant="h2" color="primary.contrastText" align="center"  marginBottom= '50px'> Projetos </Typography>
+      <Container maxWidth="lg">
+        <Typography variant="h2" color="primary.contrastText" align="center" marginBottom='50px'> Projetos </Typography>
         <Box sx={{ padding: "20px" }}>
           <Grid container spacing={4} justifyContent="center">
             {projects.map((project, index) => (
-              <Grid item key={index} xs={12} sm={6} md={6}  sx={{ display: 'flex', justifyContent: 'center' }}>
+              <Grid item key={index} xs={12} sm={6} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
                 <ProjectCard project={project} />
               </Grid>
             ))}
