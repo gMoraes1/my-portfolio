@@ -1,21 +1,21 @@
 import { Button, Grid, styled, Typography,Container } from "@mui/material";
 import JavascriptIcon from "@mui/icons-material/Code";
 import TypescriptIcon from "@mui/icons-material/Code";
-import HtmlIcon from "@mui/icons-material/Language";
+import React from "@mui/icons-material/Language";
 import GitIcon from "@mui/icons-material/GitHub";
 import CssIcon from "@mui/icons-material/Style";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode"; // Usando como substituto para Python
 import SqlIcon from "@mui/icons-material/Storage";
-import MuiIcon from "@mui/icons-material/Extension";
+import Node from "@mui/icons-material/Extension";
 const skills = [
   { label: "Javascript", icon: <JavascriptIcon /> },
   { label: "Typescript", icon: <TypescriptIcon /> },
-  { label: "HTML", icon: <HtmlIcon /> },
+  { label: "React", icon: <React/> },
   { label: "Git", icon: <GitIcon /> },
   { label: "CSS", icon: <CssIcon /> },
   { label: "Python", icon: <DeveloperModeIcon /> }, // Substitua pelo ícone personalizado, se disponível
   { label: "SQL", icon: <SqlIcon /> },
-  { label: "Material UI", icon: <MuiIcon /> },
+  { label: "Node", icon: <Node /> },
 ];
 
 const StyledButton = styled(Button)(({ theme }) => ({
@@ -30,8 +30,8 @@ const StyledButton = styled(Button)(({ theme }) => ({
 
 function Skill() {
   return (
-    <div>
-    <Container maxWidth="lg" sx={{marginBottom:25}}>
+    <div id="skills">
+    <Container maxWidth="lg" sx={{marginBottom:30}}>
       <Typography color="primary" variant="h2" textAlign="center" pb={5} marginTop="150px" marginBottom="20px" >
         Habilidades
       </Typography>

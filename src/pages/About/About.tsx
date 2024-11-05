@@ -16,6 +16,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 function AboutMe() {
   return (
+    <div id="about">
     <Container maxWidth="lg" >
     <div style={{ padding: '10px'}}>
       <Typography variant="h2" align="center"  marginTop='200px' padding='10px'>
@@ -54,6 +55,7 @@ function AboutMe() {
       </Typography>
     </div>
     </Container>
+    </div>
   );
 }
 

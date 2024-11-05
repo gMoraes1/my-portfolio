@@ -31,13 +31,13 @@ function FooterDois() {
         Todos os direitos reservados a mim. {currentYear}
       </Typography>
       <IconContainer>
-        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/gustavo-moraes-4001542b8/" target="_blank" rel="noopener noreferrer">
           <LinkedInIcon fontSize="large" />
         </a>
-        <a href="https://www.github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/gMoraes1" target="_blank" rel="noopener noreferrer">
           <GitHubIcon fontSize="large" />
         </a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.instagram.com/g___moraes/" target="_blank" rel="noopener noreferrer">
           <InstagramIcon fontSize="large" />
         </a>
       </IconContainer>

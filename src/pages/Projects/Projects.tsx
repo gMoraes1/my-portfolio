@@ -87,6 +87,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
   }));
 
   return (
+    
     <StyledCard>
       <CardMedia
         component="img"
@@ -134,6 +135,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
 const Projects = () => {
   return (
+    <div id="projects">
     <Hero>
       <Container maxWidth="lg">
         <Typography variant="h2" color="primary.contrastText" align="center" marginBottom='50px'> Projetos </Typography>
@@ -148,6 +150,7 @@ const Projects = () => {
         </Box>
       </Container>
     </Hero>
+    </div>
   );
 };
 
