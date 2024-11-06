@@ -7,7 +7,7 @@ const NavBar = () => {
         display: "flex",
         justifyContent: "space-evenly",
         padding: "10px",
-        margin: "3px"
+        margin: "8px"
     }));
 
     // Função para rolar até a seção com um offset para ajustar a posição
