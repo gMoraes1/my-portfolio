@@ -29,15 +29,15 @@ const Hero = () => {
 
     // Função para abrir o Gmail com o email pré-preenchido
     const handleGmailClick = () => {
-        const email = "gustavo.correiademoraes2006@gmail.com"; // Substitua pelo seu endereço de email
+        const email = "gustavo.correiademoraes2006@gmail.com";
         const subject = "ola, tudo bem?";
-        const body = "Olá, estou entrando em contato..."; // Corpo do e-mail
-
-        // Criando o link mailto com os parâmetros
-        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        
-        // Abrindo o Gmail ou qualquer cliente de e-mail
-        window.location.href = mailtoLink;
+        const body = "Olá, estou entrando em contato...";
+    
+        // Link para abrir o Gmail na web com os campos pré-preenchidos
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+        // Abrir o link no navegador (nova aba)
+        window.open(mailtoLink, "_blank");
     };
 
     // Função para baixar o currículo
