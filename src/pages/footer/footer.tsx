@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styled from '@emotion/styled';
 import { Theme, useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -19,7 +19,19 @@ const IconContainer = styled('div')({
   justifyContent: 'center',
   gap: '15px',
   marginTop: '10px',
-});
+
+'& a': {
+  color: '0077b5',
+  textDecoration: 'none',
+  transition: 'color 0.3s',
+  '&:hover': {
+    color: '#f39c12', // laranja vibrante
+
+  },
+},
+
+
+  });
 
 function FooterDois() {
   const theme = useTheme();
@@ -27,7 +39,7 @@ function FooterDois() {
 
   return (
     <StyledFooter theme={theme}>
-      <Typography color="primary" variant="h2" pb={2}>
+      <Typography color="primary" variant="h3" pb={2}>
         Todos os direitos reservados a mim. {currentYear}
       </Typography>
       <IconContainer>

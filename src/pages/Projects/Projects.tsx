@@ -3,40 +3,46 @@ import { Box, Grid, Card, CardContent, CardMedia, Typography, Container } from '
 import { styled, Theme } from '@mui/system';
 import StyledButton from '../../components/StyledButton/StyledButton';
 
+// Importe as imagens diretamente do repositório
+import project1Image from '../../assets/images/imagensSite/cep.png';
+//import project2Image from '../../assets/project2.jpg';
+//import project3Image from '../../assets/project3.jpg';
+
+// Definição dos projetos com as imagens locais
 const projects = [
   {
-    title: "Project Craze Maze",
-    date: "Jul 2019 - May 2019",
-    description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
-    technologies: "JavaScript, HTML, CSS, Canvas Graphics",
-    image: "url-da-imagem-aqui",
-    viewProjectLink: "link-do-projeto",
-    viewCodeLink: "link-do-codigo",
+    title: "Project Via-Cep",
+    date: "Julho 2023 -  Agosto 2023",
+    description: "Projeto desenvolvido com o objetivo de buscar informações de endereços através da API Via-Cep. O usuário pode inserir o CEP e obter informações como logradouro, bairro, cidade e estado.",
+    technologies: "JavaScript, HTML, CSS",
+    image: project1Image,  // Referência à imagem local
+    viewProjectLink: "https://busca-cep-b8uz.vercel.app/",
+    viewCodeLink: "https://github.com/gMoraes1/BuscaCep.git",
   },
   {
     title: "Project Craze Maze",
     date: "Jul 2019 - May 2019",
     description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
     technologies: "JavaScript, HTML, CSS, Canvas Graphics",
-    image: "url-da-imagem-aqui",
+    //image: project2Image,  // Referência à imagem local
     viewProjectLink: "link-do-projeto",
     viewCodeLink: "link-do-codigo",
   },
   {
-    title: "Project Craze Maze",
+    title: "Project Crazy Maze",
     date: "Jul 2019 - May 2019",
     description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
     technologies: "JavaScript, HTML, CSS, Canvas Graphics",
-    image: "url-da-imagem-aqui",
+    //image: project3Image,  // Referência à imagem local
     viewProjectLink: "link-do-projeto",
     viewCodeLink: "link-do-codigo",
   },
   {
-    title: "Project Craze Maze",
+    title: "Project Crazy Maze",
     date: "Jul 2019 - May 2019",
     description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
     technologies: "JavaScript, HTML, CSS, Canvas Graphics",
-    image: "url-da-imagem-aqui",
+    //image: project3Image,  // Referência à imagem local
     viewProjectLink: "link-do-projeto",
     viewCodeLink: "link-do-codigo",
   },
@@ -63,61 +69,80 @@ const Hero: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     paddingTop: "150px",
     paddingBottom: "100px",
   }));
+  // Estilização personalizada para os títulos e textos
+const StyledTypographyTitle = styled(Typography)({
+  fontSize: '1.5rem',
+  fontWeight: 'bold',
+  color: '#FFD700', // Cor dourada
+  marginBottom: '10px',
+});
+
+const StyledTypographyDate = styled(Typography)({
+  fontSize: '1rem',
+  fontStyle: 'italic',
+  color: '#B0C4DE', // Cor azul clara
+  marginBottom: '15px',
+});
+
+const StyledTypographyDescription = styled(Typography)({
+  fontSize: '1rem',
+  color: '#E0E0E0',
+  marginBottom: '15px',
+  lineHeight: '1.6',
+});
 
   return <StyledHero>{children}</StyledHero>;
 };
 
 const ProjectCard = ({ project }: { project: Project }) => {
-  const StyledCard = styled(Card)(({ theme }: { theme: Theme }) => ({
-    borderRadius: "8px",
-    padding: "10px",
-    width: "700px",
-    height: "700px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "space-between",
-    backgroundColor: '#f5f5f5',
-    border: '1px solid white',
-    transition: 'transform 0.3s, box-shadow 0.3s',
-    boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
-    '&:hover': {
-      transform: 'scale(1.02)',
-      boxShadow: `0px 0px 15px 5px ${theme.palette.secondary.main}`,
-    },
-  }));
-
-  return (
-    
-    <StyledCard>
-      <CardMedia
-        component="img"
-        image={project.image}
-        alt={project.title}
-        sx={{
-          height: "200px",
-          width: "100%",
-          objectFit: "cover",
-          borderRadius: "4px",
-          marginBottom: "8px",
-        }}
-      />
-      <CardContent sx={{
-        flexGrow: 1,
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        padding: '16px',
-      }}>
-        <Typography variant="h6" component="div" sx={{ marginBottom: '8px' }}>
+    const StyledCard = styled(Card)(({ theme }: { theme: Theme }) => ({
+      borderRadius: "8px",
+      padding: "10px",
+      width: "700px",
+      height: "700px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-between",
+      backgroundColor: 'transparent',  // Tornando o fundo transparente
+      border: '1px solid white',
+      transition: 'transform 0.3s, box-shadow 0.3s',
+      boxShadow: '3px 3px 3px rgba(0, 0, 0, 0.2)',
+      '&:hover': {
+        transform: 'scale(1.02)',
+        boxShadow: `0px 0px 15px 5px ${theme.palette.secondary.main}`,
+      },
+    }));
+  
+    return (
+      <StyledCard>
+        <CardMedia
+          component="img"
+          image={project.image}
+          alt={project.title}
+          sx={{
+            height: "200px",
+            objectFit: "cover",
+            borderRadius: "4px",
+            marginBottom: "8px",
+          }}
+        />
+        <CardContent sx={{
+          flexGrow: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          padding: '16px',
+        }}>
+        <Typography variant="h6"color='white' component="div" sx={{ marginBottom: '8px' }}>
           {project.title}
         </Typography>
-        <Typography variant="body2" color="textSecondary" sx={{ marginBottom: '8px' }}>
+        <Typography variant="body2"  color='white' sx={{ marginBottom: '8px' }}>
           {project.date}
         </Typography>
-        <Typography variant="body2" sx={{ marginBottom: '8px', overflow: "hidden", textOverflow: "ellipsis" }}>
+        <Typography variant="body2" color='white' sx={{ marginBottom: '8px', overflow: "hidden", textOverflow: "ellipsis" }}>
           {project.description}
         </Typography>
-        <Typography variant="body2" sx={{ fontStyle: "italic", color: "gray" }}>
+        <Typography variant="body2" color='white' sx={{ fontStyle: "italic", color: "gray" }}>
           Technologies: {project.technologies}
         </Typography>
       </CardContent>
@@ -136,20 +161,20 @@ const ProjectCard = ({ project }: { project: Project }) => {
 const Projects = () => {
   return (
     <div id="projects">
-    <Hero>
-      <Container maxWidth="lg">
-        <Typography variant="h2" color="primary.contrastText" align="center" marginBottom='50px'> Projetos </Typography>
-        <Box sx={{ padding: "20px" }}>
-          <Grid container spacing={4} justifyContent="center">
-            {projects.map((project, index) => (
-              <Grid item key={index} xs={12} sm={6} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
-                <ProjectCard project={project} />
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
-      </Container>
-    </Hero>
+      <Hero>
+        <Container maxWidth="lg">
+          <Typography variant="h2" color="primary.contrastText" align="center" marginBottom='50px'> Projetos </Typography>
+          <Box sx={{ padding: "20px" }}>
+            <Grid container spacing={4} justifyContent="center">
+              {projects.map((project, index) => (
+                <Grid item key={index} xs={12} sm={6} md={6} sx={{ display: 'flex', justifyContent: 'center' }}>
+                  <ProjectCard project={project} />
+                </Grid>
+              ))}
+            </Grid>
+          </Box>
+        </Container>
+      </Hero>
     </div>
   );
 };
