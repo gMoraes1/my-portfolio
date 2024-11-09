@@ -5,7 +5,7 @@ import StyledButton from '../../components/StyledButton/StyledButton';
 
 // Importe as imagens diretamente do repositório
 import project1Image from '../../assets/images/imagensSite/cep.png';
-//import project2Image from '../../assets/project2.jpg';
+import project2Image from '../../assets/images/imagensSite/smart.png';
 //import project3Image from '../../assets/project3.jpg';
 
 // Definição dos projetos com as imagens locais
@@ -20,13 +20,13 @@ const projects = [
     viewCodeLink: "https://github.com/gMoraes1/BuscaCep.git",
   },
   {
-    title: "Project Craze Maze",
-    date: "Jul 2019 - May 2019",
-    description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
-    technologies: "JavaScript, HTML, CSS, Canvas Graphics",
-    //image: project2Image,  // Referência à imagem local
-    viewProjectLink: "link-do-projeto",
-    viewCodeLink: "link-do-codigo",
+    title: "SmartBinder",
+    date: "Abril 2024 - Dezembro 2024",
+    description: "Site feito para o TCC da ETEC no curso de desenvolvimento de sistemas onde nossa equipe tem um cliente que esta buscando um aplicativo para ajudar a organizar suas tarefas e automatizar as funções exercidas pelos professores . O site foi feito para apresentar o aplicativo e suas funcionalidades.",
+    technologies: "ReactJs,Typescript ,Material-UI",
+    image: project2Image,  // Referência à imagem local
+    viewProjectLink: "https://smartbinder.vercel.app/",
+    viewCodeLink: "https://github.com/etecguarulhos/smart-binder-web.git",
   },
   {
     title: "Project Crazy Maze",
@@ -54,45 +54,25 @@ interface Project {
   date: string;
   description: string;
   technologies: string;
-  image: string;
+  image?: string;
   viewProjectLink: string;
   viewCodeLink: string;
 }
 
+const StyledHero = styled("div")(({ theme }: { theme: Theme }) => ({
+  backgroundColor: theme.palette.primary.main,
+  width: "100%",
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+  paddingTop: "150px",
+  paddingBottom: "100px",
+}));
+
 const Hero: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
-  const StyledHero = styled("div")(({ theme }: { theme: Theme }) => ({
-    backgroundColor: theme.palette.primary.main,
-    width: "100%",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    paddingTop: "150px",
-    paddingBottom: "100px",
-  }));
-  // Estilização personalizada para os títulos e textos
-const StyledTypographyTitle = styled(Typography)({
-  fontSize: '1.5rem',
-  fontWeight: 'bold',
-  color: '#FFD700', // Cor dourada
-  marginBottom: '10px',
-});
-
-const StyledTypographyDate = styled(Typography)({
-  fontSize: '1rem',
-  fontStyle: 'italic',
-  color: '#B0C4DE', // Cor azul clara
-  marginBottom: '15px',
-});
-
-const StyledTypographyDescription = styled(Typography)({
-  fontSize: '1rem',
-  color: '#E0E0E0',
-  marginBottom: '15px',
-  lineHeight: '1.6',
-});
-
   return <StyledHero>{children}</StyledHero>;
 };
+
 
 const ProjectCard = ({ project }: { project: Project }) => {
     const StyledCard = styled(Card)(({ theme }: { theme: Theme }) => ({
@@ -120,8 +100,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           image={project.image}
           alt={project.title}
           sx={{
-            height: "200px",
-            objectFit: "cover",
+            height: "320px",
+            width: "100%",
             borderRadius: "4px",
             marginBottom: "8px",
           }}
