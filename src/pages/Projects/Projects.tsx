@@ -6,6 +6,7 @@ import StyledButton from '../../components/StyledButton/StyledButton';
 // Importe as imagens diretamente do repositório
 import project1Image from '../../assets/images/imagensSite/cep.png';
 import project2Image from '../../assets/images/imagensSite/smart.png';
+import project3Image from '../../assets/images/imagensSite/land.png';
 //import project3Image from '../../assets/project3.jpg';
 
 // Definição dos projetos com as imagens locais
@@ -33,7 +34,7 @@ const projects = [
     date: "Julho 2024 - Agosto 2024",
     description: "Projeto desenvolvido com ReactJS e Tailwindcss. Foi o primeiro contato com a nova tecnologia de estilização e mais aprendizado sobre React .",
     technologies: "ReactJs,Typescript , Tailwindcss",
-    //image: project3Image,  // Referência à imagem local
+    image:project3Image ,  // Referência à imagem local
     viewProjectLink: "https://projeto-em-react-e-tailwind-css.vercel.app/",
     viewCodeLink: "https://github.com/gMoraes1/projeto-em-react-e-Tailwind-CSS",
   },
