@@ -29,13 +29,13 @@ const projects = [
     viewCodeLink: "https://github.com/etecguarulhos/smart-binder-web.git",
   },
   {
-    title: "Project Crazy Maze",
-    date: "Jul 2019 - May 2019",
-    description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
-    technologies: "JavaScript, HTML, CSS, Canvas Graphics",
+    title: "LandPage",
+    date: "Julho 2024 - Agosto 2024",
+    description: "Projeto desenvolvido com ReactJS e Tailwindcss. Foi o primeiro contato com a nova tecnologia de estilização e mais aprendizado sobre React .",
+    technologies: "ReactJs,Typescript , Tailwindcss",
     //image: project3Image,  // Referência à imagem local
-    viewProjectLink: "link-do-projeto",
-    viewCodeLink: "link-do-codigo",
+    viewProjectLink: "https://projeto-em-react-e-tailwind-css.vercel.app/",
+    viewCodeLink: "https://github.com/gMoraes1/projeto-em-react-e-Tailwind-CSS",
   },
   {
     title: "Project Crazy Maze",
