@@ -123,7 +123,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           Technologies: {project.technologies}
         </Typography>
       </CardContent>
-      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: "8px", background: "#808080" }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: "8px", background: "#80808" }}>
         <StyledButton onClick={() => window.open(project.viewProjectLink, "_blank")}>
           View Project
         </StyledButton>
