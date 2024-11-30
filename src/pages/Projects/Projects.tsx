@@ -92,17 +92,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
 
   return (
     <StyledCard>
-      <CardMedia
-        component="img"
-        image={project.image}
-        alt={project.title}
-        sx={{
-          height: "320px",
-          width: "100%",
-          borderRadius: "4px",
-          marginBottom: "8px",
-        }}
-      />
       <CardContent sx={{
         flexGrow: 1,
         display: 'flex',
@@ -110,16 +99,27 @@ const ProjectCard = ({ project }: { project: Project }) => {
         justifyContent: 'space-between',
         padding: '16px',
       }}>
-        <Typography variant="h6" color='white' component="div" sx={{ marginBottom: '8px' }}>
+        <Typography variant="h6" color='white' component="div" sx={{ marginBottom: '8px', fontWeight: 'bold' }}>
           {project.title}
         </Typography>
-        <Typography variant="body2" color='white' sx={{ marginBottom: '8px' }}>
+        <CardMedia
+          component="img"
+          image={project.image}
+          alt={project.title}
+          sx={{
+            height: "320px",
+            width: "100%",
+            borderRadius: "4px",
+            marginBottom: "8px",
+          }}
+        />
+        <Typography variant="body2" color='white' sx={{ marginBottom: '8px', fontStyle: 'italic' }}>
           {project.date}
         </Typography>
-        <Typography variant="body2" color='white' sx={{ marginBottom: '8px', overflow: "hidden", textOverflow: "ellipsis" }}>
+        <Typography variant="body2" color='white' sx={{ marginBottom: '8px', overflow: "hidden", textOverflow: "ellipsis", fontSize: '1rem' }}>
           {project.description}
         </Typography>
-        <Typography variant="body2" color='white' sx={{ fontStyle: "italic", color: "gray" }}>
+        <Typography variant="body2" color='secondary' sx={{ fontStyle: "italic", fontWeight: 'bold' }}>
           Technologies: {project.technologies}
         </Typography>
       </CardContent>
