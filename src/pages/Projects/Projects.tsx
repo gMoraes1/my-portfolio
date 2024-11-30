@@ -119,7 +119,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <Typography variant="body2" color='white' sx={{ marginBottom: '8px', overflow: "hidden", textOverflow: "ellipsis", fontSize: '1rem' }}>
           {project.description}
         </Typography>
-        <Typography variant="body2" color='secondary' sx={{ fontStyle: "italic", fontWeight: 'bold' }}>
+        <Typography variant="body2" color='#fff' >
           Technologies: {project.technologies}
         </Typography>
       </CardContent>
