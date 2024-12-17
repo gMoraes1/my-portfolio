@@ -30,8 +30,8 @@ const Hero = () => {
     // Função para abrir o Gmail com o email pré-preenchido
     const handleGmailClick = () => {
         const email = "gustavo.correiademoraes2006@gmail.com";
-        const subject = "ola, tudo bem?";
-        const body = "Olá, estou entrando em contato...";
+        const subject = "Assunto";
+        const body = "Motivo do contato";
     
         // Link para abrir o Gmail na web com os campos pré-preenchidos
         const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -42,7 +42,7 @@ const Hero = () => {
 
     // Função para baixar o currículo
     const handleDownloadClick = () => {
-        window.open('/path/to/your/resume.pdf', '_blank');  // Substitua pelo caminho do seu currículo
+        window.open('../../../../assets/curriculo/Gustavo-curriculo.docx', '_blank');  // Substitua pelo caminho do seu currículo
     };
 
     return (

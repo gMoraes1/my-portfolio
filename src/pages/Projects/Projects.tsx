@@ -7,6 +7,7 @@ import StyledButton from '../../components/StyledButton/StyledButton';
 import project1Image from '../../assets/images/imagensSite/cep.png';
 import project2Image from '../../assets/images/imagensSite/smart.png';
 import project3Image from '../../assets/images/imagensSite/land.png';
+import project4Image from '../../assets/images/imagensSite/smartApp.png';   
 
 // Definição dos projetos com as imagens locais
 const projects = [
@@ -38,12 +39,13 @@ const projects = [
     viewCodeLink: "https://github.com/gMoraes1/projeto-em-react-e-Tailwind-CSS",
   },
   {
-    title: "Project Crazy Maze",
-    date: "Jul 2019 - May 2019",
-    description: "Game to escape the maze, but not only that. An algorithm has been created that randomly generates a new maze each time the game is started. In this game, the user can use the keyboard keys to move until they find the flag and win the game.",
-    technologies: "JavaScript, HTML, CSS, Canvas Graphics",
+    title: "SmartBinder App",
+    date: "Janeiro 2024 - Dezembro 2024",  
+    description: "Aplicativo feito em React Native para o TCC da ETEC no curso de desenvolvimento de sistemas onde nossa equipe tem um cliente que esta buscando um aplicativo para ajudar a organizar suas tarefas e automatizar as funções exercidas pelos professores. ele utiliza o firebase para autenticação e banco de dados.",  
+    technologies: "React Native, Firebase",
+    image: project4Image,
     viewProjectLink: "link-do-projeto",
-    viewCodeLink: "link-do-codigo",
+    viewCodeLink: "https://github.com/etecguarulhos/smart-binder-app.git",
   },
 ];
 
@@ -107,8 +109,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           image={project.image}
           alt={project.title}
           sx={{
-            height: "320px",
-            width: "100%",
+            height: "300px",
+            width: "500px",
             borderRadius: "4px",
             marginBottom: "8px",
           }}
