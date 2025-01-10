@@ -44,7 +44,7 @@ const projects = [
     description: "Aplicativo feito em React Native para o TCC da ETEC no curso de desenvolvimento de sistemas onde nossa equipe tem um cliente que esta buscando um aplicativo para ajudar a organizar suas tarefas e automatizar as funções exercidas pelos professores. ele utiliza o firebase para autenticação e banco de dados.",  
     technologies: "React Native, Firebase",
     image: project4Image,
-    viewProjectLink: "link-do-projeto",
+    viewProjectLink: "https://github.com/etecguarulhos/smart-binder-app.git",
     viewCodeLink: "https://github.com/etecguarulhos/smart-binder-app.git",
   },
 ];
