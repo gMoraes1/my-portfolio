@@ -43,7 +43,7 @@ const Hero = () => {
     // Função para baixar o currículo
     const handleDownloadClick = () => {
         const link = document.createElement('a');
-        link.href = '/curriculo/Gustavo-curriculo.docx'; // Caminho relativo ao `public`
+        link.href = '/src/assets/curriculo/curriculo.docx'; // Caminho relativo ao `public`
         link.download = 'Gustavo-curriculo.docx';
         document.body.appendChild(link);
         link.click();
