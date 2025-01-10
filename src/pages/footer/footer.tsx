@@ -40,7 +40,7 @@ function FooterDois() {
   return (
     <StyledFooter theme={theme}>
       <Typography color="primary" variant="h3" pb={2}>
-        Todos os direitos reservados a mim. {currentYear}
+        Todos os direitos reservados. {currentYear}
       </Typography>
       <IconContainer>
         <a href="https://www.linkedin.com/in/gustavo-moraes-4001542b8/" target="_blank" rel="noopener noreferrer">
