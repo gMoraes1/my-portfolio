@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Box, Grid, Card, CardContent, CardMedia, Typography, Container } from '@mui/material';
 import { styled, Theme } from '@mui/system';
 import StyledButton from '../../components/StyledButton/StyledButton';

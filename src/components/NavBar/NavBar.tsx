@@ -1,4 +1,4 @@
-import React from "react";
+
 import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
 
 // Função de rolagem que lida com diferentes offsets
