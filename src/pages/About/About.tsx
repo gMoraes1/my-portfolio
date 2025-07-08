@@ -50,14 +50,13 @@ function AboutMe() {
       </Grid>
       <Typography color="primary" variant="h5" marginTop="40px" padding="20px"
       >
-                Desenvolvedor com 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL. Atuação prática
-        com Git, CI/CD, Docker, Kubernetes e React. Atualmente, aprofundando conhecimentos em DevOps com foco em AWS e Cloud, além disso estou desenvolvendo projetos pessoais em Pyhon
-        usando Flask para criar APIs RESTful, containerizando com Docker e orquestrando com Docker-compose. <br></br>
+               Iniciei minha trajetória como desenvolvedor focado em front-end, mas atualmente estou direcionando minha carreira para back-end e DevOps. Por isso, organizei este portfólio para refletir essa evolução, com projetos divididos por área de atuação.
 
-        Possuo boa comunicação, sou colaborativo e focado em resultados. Desenvolvi soluções escaláveis para atender
-        necessidades reais de usuários e participei de projetos com aplicação de conceitos de Machine Learning, otimizando,
-        acelerando processo e criando relatórios que ajudaram o time.
-        Busco uma oportunidade para aplicar e expandir minhas habilidades técnicas em ambientes desafiadores.
+      Tenho 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL, com atuação prática em Git, CI/CD, Docker, Kubernetes e React. Atualmente, estou aprofundando meus conhecimentos em AWS e práticas de Cloud Computing. <br></br>
+
+      Tenho desenvolvido projetos pessoais com Flask e FastAPI para criação de APIs RESTful, aplicando Docker e Docker Compose para conteinerização e orquestração.
+
+      Sou comunicativo, colaborativo e focado em resultados. Já participei de projetos com aplicação de Machine Learning, desenvolvendo soluções escaláveis, otimizando processos e criando relatórios que apoiaram a tomada de decisão do time.
       </Typography>
     </div>
     </Container>
