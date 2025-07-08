@@ -6,7 +6,11 @@ import GitIcon from "@mui/icons-material/GitHub";
 import CssIcon from "@mui/icons-material/Style";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode"; // Usando como substituto para Python
 import SqlIcon from "@mui/icons-material/Storage";
-import Node from "@mui/icons-material/Extension";
+import StorageIcon from "@mui/icons-material/Storage"; // para Docker ou Kubernetes (temporariamente)
+import CloudIcon from "@mui/icons-material/Cloud";     // para Cloud
+import BuildIcon from "@mui/icons-material/Build";     // para CI/CD
+
+
 const skills = [
   { label: "Javascript", icon: <JavascriptIcon /> },
   { label: "Typescript", icon: <TypescriptIcon /> },
@@ -15,7 +19,12 @@ const skills = [
   { label: "CSS", icon: <CssIcon /> },
   { label: "Python", icon: <DeveloperModeIcon /> }, // Substitua pelo ícone personalizado, se disponível
   { label: "SQL", icon: <SqlIcon /> },
-  { label: "Node", icon: <Node /> },
+  { label: "FastApi", icon: <SqlIcon /> },
+  { label: "Docker", icon: <StorageIcon/> },
+  { label: "Cloud", icon: <CloudIcon/> },
+  { label: "Kubernetes", icon: <StorageIcon/> },
+  { label: "CI/CD",icon: <BuildIcon/> },
+
 ];
 
 const StyledButton = styled(Button)(({ theme }) => ({
