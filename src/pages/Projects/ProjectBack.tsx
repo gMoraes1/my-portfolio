@@ -137,13 +137,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
   );
 };
 
-const Projects = () => {
+const ProjectBack = () => {
   return (
     <div id="projects">
       <Hero>
         <Container maxWidth="lg">
           <Typography variant="h2" color="primary.contrastText" align="center" marginBottom='30px' sx={{ marginTop: '-100px' }}>
-            Projetos Front End
+            Projetos Back End
           </Typography>
           <Box sx={{ padding: "20px" }}>
             <Grid container spacing={4} justifyContent="center">
@@ -160,4 +160,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectBack;

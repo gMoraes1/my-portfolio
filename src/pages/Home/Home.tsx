@@ -4,6 +4,7 @@ import Projects from "../Projects/Projects";
 import Skill from "../Skill/Skill";
 import FooterDois from "../footer/footer";
 import Hero from "./sections/Hero/Hero";
+import ProjectBack  from "../Projects/ProjectBack";
 
 
 const Home = () => {
@@ -13,7 +14,8 @@ const Home = () => {
       <Hero />
       <About />
       <Skill />
-      <Projects />
+      <ProjectBack/>
+      <Projects/>
       <FooterDois />
     </>
   );
