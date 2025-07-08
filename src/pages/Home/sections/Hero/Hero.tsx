@@ -31,7 +31,7 @@ const Hero = () => {
     const handleGmailClick = () => {
         const email = "gustavo.correiademoraes2006@gmail.com";
         const subject = "Assunto";
-        const body = "Motivo do contato";
+        const body = "queria saber mais sobre o seu trabalho";
     
         // Link para abrir o Gmail na web com os campos pré-preenchidos
         const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -70,7 +70,7 @@ const Hero = () => {
                                 Gustavo Moraes
                             </Typography>
                             <Typography color="primary.contrastText" variant="h3" textAlign="center">
-                                Eu sou desenvolvedor front end
+                                Eu atuo como programador
                             </Typography>
                             <Grid container display="flex" justifyContent="center" spacing={4} pt={6}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">

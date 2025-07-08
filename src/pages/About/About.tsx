@@ -30,8 +30,8 @@ function AboutMe() {
               <Typography variant="h6" component="div">
                 Experiência
               </Typography>
-              <Typography variant="body2"  fontWeight="bold" fontSize= "17px">1 ano</Typography>
-              <Typography variant="body1"  fontWeight="bold" fontSize= "15px">Desenvolvimento Frontend/machine learning</Typography>
+              <Typography variant="body2"  fontWeight="bold" fontSize= "17px">2 anos</Typography>
+              <Typography variant="body1"  fontWeight="bold" fontSize= "15px">Desenvolvimento full stack/ Devops</Typography>
             </CardContent>
           </StyledCard>
         </Grid>
@@ -50,8 +50,14 @@ function AboutMe() {
       </Grid>
       <Typography color="primary" variant="h5" marginTop="40px" padding="20px"
       >
-            Meu nome é Gustavo, tenho 18 anos e sou estudante de tecnologia, focado
-         em desenvolvimento front-end. Tenho habilidades em HTML, CSS e JavaScript, e estou explorando frameworks como React e linguagens back end como python para criar interfaces intuitivas e atraentes. Estou sempre em busca de inspiração nas últimas tendências de design. Meu objetivo é aprimorar minhas habilidades em front-end e contribuir para projetos desafiadores, sonhando em um dia trabalhar em uma grande empresa de tecnologia para ter mais experiência.
+                Desenvolvedor com 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL. Atuação prática
+        com Git, CI/CD, Docker, Kubernetes e React. Atualmente, aprofundando conhecimentos em DevOps com foco em AWS e Cloud, além disso estou desenvolvendo projetos pessoais em Pyhon
+        usando Flask para criar APIs RESTful, containerizando com Docker e orquestrando com Docker-compose. <br></br>
+
+        Possuo boa comunicação, sou colaborativo e focado em resultados. Desenvolvi soluções escaláveis para atender
+        necessidades reais de usuários e participei de projetos com aplicação de conceitos de Machine Learning, otimizando,
+        acelerando processo e criando relatórios que ajudaram o time.
+        Busco uma oportunidade para aplicar e expandir minhas habilidades técnicas em ambientes desafiadores.
       </Typography>
     </div>
     </Container>
