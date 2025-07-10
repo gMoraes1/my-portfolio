@@ -4,49 +4,29 @@ import { styled, Theme } from '@mui/system';
 import StyledButton from '../../components/StyledButton/StyledButton';
 
 // Importe as imagens diretamente do repositório
-import project1Image from '../../assets/images/imagensSite/cep.png';
-import project2Image from '../../assets/images/imagensSite/smart.png';
-import project3Image from '../../assets/images/imagensSite/land.png';
-import project4Image from '../../assets/images/imagensSite/smartApp.png';   
+import project1Image from '../../assets/images/imagensBackend/redoclyEscolar.jpeg';
+import project2Image from '../../assets/images/imagensBackend/terminala.jpeg';
 
 // Definição dos projetos com as imagens locais
 const projects = [
   {
-    title: "Project Via-Cep",
-    date: "Julho 2023 -  Agosto 2023",
-    description: "Projeto desenvolvido com o objetivo de buscar informações de endereços através da API Via-Cep. O usuário pode inserir o CEP e obter informações como logradouro, bairro, cidade e estado.",
-    technologies: "JavaScript, HTML, CSS",
+    title: "API ReDocly Escolar",   
+    date: "Junho 2025 -  Julho 2025",
+    description: "Projeto feio junto com a imersão da Alura, onde foi desenvolvido uma API para o sistema escolar, onde o usuário pode cadastrar alunos, cursos e turmas, além de poder consultar as informações de cada um deles. A API foi feita utilizando o ReDocly para documentar a API.",    
+    technologies: "FastAPI, Python, SQLAlchemy, sqlite, ReDocly, Docker e Docker Compose",     
     image: project1Image,
     viewProjectLink: "https://busca-cep-b8uz.vercel.app/",
     viewCodeLink: "https://github.com/gMoraes1/BuscaCep.git",
   },
   {
-    title: "SmartBinder",
-    date: "Abril 2024 - Dezembro 2024",
-    description: "Site feito para o TCC da ETEC no curso de desenvolvimento de sistemas onde nossa equipe tem um cliente que esta buscando um aplicativo para ajudar a organizar suas tarefas e automatizar as funções exercidas pelos professores . O site foi feito para apresentar o aplicativo e suas funcionalidades.",
-    technologies: "ReactJs,Typescript ,Material-UI",
+    title: "API Filmes",
+    date: "Maio 2025 - Junho 2025",
+    description: "Projeto desenvolvido onde foi criado uma API para gerenciar filmes, onde o usuario pode cadastrar, consultar, atualizar e deletar filmes e suas informações. A API foi feita utilizando o FastAPI e o banco de dados SQLite, além de usar ORMS para manipular as tabelas do banco de dados.",
+    technologies: "FastAPI, Python, SQLAlchemy, sqlite, Docker e Docker Compose",
     image: project2Image,
     viewProjectLink: "https://smartbinder.vercel.app/",
     viewCodeLink: "https://github.com/etecguarulhos/smart-binder-web.git",
-  },
-  {
-    title: "LandPage",
-    date: "Julho 2024 - Agosto 2024",
-    description: "Projeto desenvolvido com ReactJS e Tailwindcss. Foi o primeiro contato com a nova tecnologia de estilização e mais aprendizado sobre React .",
-    technologies: "ReactJs,Typescript , Tailwindcss",
-    image: project3Image,
-    viewProjectLink: "https://projeto-em-react-e-tailwind-css.vercel.app/",
-    viewCodeLink: "https://github.com/gMoraes1/projeto-em-react-e-Tailwind-CSS",
-  },
-  {
-    title: "SmartBinder App",
-    date: "Janeiro 2024 - Dezembro 2024",  
-    description: "Aplicativo feito em React Native para o TCC da ETEC no curso de desenvolvimento de sistemas onde nossa equipe tem um cliente que esta buscando um aplicativo para ajudar a organizar suas tarefas e automatizar as funções exercidas pelos professores. ele utiliza o firebase para autenticação e banco de dados.",  
-    technologies: "React Native, Firebase",
-    image: project4Image,
-    viewProjectLink: "https://github.com/etecguarulhos/smart-binder-app.git",
-    viewCodeLink: "https://github.com/etecguarulhos/smart-binder-app.git",
-  },
+  }
 ];
 
 interface Project {
@@ -126,9 +106,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
         </Typography>
       </CardContent>
       <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: "8px", background: "#8080" }}>
-        <StyledButton onClick={() => window.open(project.viewProjectLink, "_blank")}>
-          View Project
-        </StyledButton>
         <StyledButton onClick={() => window.open(project.viewCodeLink, "_blank")}>
           View Code
         </StyledButton>

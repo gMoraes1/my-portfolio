@@ -4,10 +4,10 @@ import { styled, Theme } from '@mui/system';
 import StyledButton from '../../components/StyledButton/StyledButton';
 
 // Importe as imagens diretamente do repositório
-import project1Image from '../../assets/images/imagensSite/cep.png';
-import project2Image from '../../assets/images/imagensSite/smart.png';
-import project3Image from '../../assets/images/imagensSite/land.png';
-import project4Image from '../../assets/images/imagensSite/smartApp.png';   
+import project1Image from '../../assets/images/ImagensFrontend/cep.png';
+import project2Image from '../../assets/images/ImagensFrontend/smart.png';
+import project3Image from '../../assets/images/ImagensFrontend/land.png';
+import project4Image from '../../assets/images/ImagensFrontend/smartApp.png';   
 
 // Definição dos projetos com as imagens locais
 const projects = [
