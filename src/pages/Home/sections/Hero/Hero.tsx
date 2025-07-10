@@ -70,7 +70,7 @@ const Hero = () => {
                                 Gustavo Moraes
                             </Typography>
                             <Typography color="primary.contrastText" variant="h3" textAlign="center">
-                                Eu atuo como programador
+                                Eu sou programador back end 
                             </Typography>
                             <Grid container display="flex" justifyContent="center" spacing={4} pt={6}>
                                 <Grid item xs={12} md={4} display="flex" justifyContent="center">
