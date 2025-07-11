@@ -5,7 +5,8 @@ import StyledButton from '../../components/StyledButton/StyledButton';
 
 // Importe as imagens diretamente do repositório
 import project1Image from '../../assets/images/imagensBackend/redoclyEscolar.jpeg';
-import project2Image from '../../assets/images/imagensBackend/terminala.jpeg';
+import project2Image from '../../assets/images/imagensBackend/Swagger.png';
+import project3Image from '../../assets/images/imagensBackend/formulario.png';
 
 // Definição dos projetos com as imagens locais
 const projects = [
@@ -15,8 +16,7 @@ const projects = [
     description: "Projeto feio junto com a imersão da Alura, onde foi desenvolvido uma API para o sistema escolar, onde o usuário pode cadastrar alunos, cursos e turmas, além de poder consultar as informações de cada um deles. A API foi feita utilizando o ReDocly para documentar a API.",    
     technologies: "FastAPI, Python, SQLAlchemy, sqlite, ReDocly, Docker e Docker Compose",     
     image: project1Image,
-    viewProjectLink: "https://busca-cep-b8uz.vercel.app/",
-    viewCodeLink: "https://github.com/gMoraes1/BuscaCep.git",
+    viewCodeLink: "https://github.com/gMoraes1/API-Escola",
   },
   {
     title: "API Filmes",
@@ -24,8 +24,15 @@ const projects = [
     description: "Projeto desenvolvido onde foi criado uma API para gerenciar filmes, onde o usuario pode cadastrar, consultar, atualizar e deletar filmes e suas informações. A API foi feita utilizando o FastAPI e o banco de dados SQLite, além de usar ORMS para manipular as tabelas do banco de dados.",
     technologies: "FastAPI, Python, SQLAlchemy, sqlite, Docker e Docker Compose",
     image: project2Image,
-    viewProjectLink: "https://smartbinder.vercel.app/",
-    viewCodeLink: "https://github.com/etecguarulhos/smart-binder-web.git",
+    viewCodeLink: "https://github.com/gMoraes1/API-Filmes",
+  },
+  {
+    title: "Formulário de cadastro de informações", 
+    date: "Abril 2025 - Maio 2025", 
+    description: "Projeto desenvolvido onde foi criado um formulário para cadastrar o nome da pessoa e uma mensagem, usei Docker para criar o container e o MySQL para armazenar as informações",
+    technologies: " HTML, CSS, JavaScript, Docker, MySQL",  
+    image: project3Image,
+    viewCodeLink: "https://github.com/gMoraes1/projeto-dio-desafio",
   }
 ];
 
@@ -35,7 +42,6 @@ interface Project {
   description: string;
   technologies: string;
   image?: string;
-  viewProjectLink: string;
   viewCodeLink: string;
 }
 
