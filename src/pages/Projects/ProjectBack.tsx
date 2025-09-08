@@ -3,12 +3,11 @@ import { Box, Grid, Card, CardContent, CardMedia, Typography, Container } from '
 import { styled, Theme } from '@mui/system';
 import StyledButton from '../../components/StyledButton/StyledButton';
 
-// Importe as imagens diretamente do repositório
 import project1Image from '../../assets/images/imagensBackend/redoclyEscolar.jpeg';
 import project2Image from '../../assets/images/imagensBackend/Swagger.png';
 import project3Image from '../../assets/images/imagensBackend/formulario.png';
+import project4Image from '../../assets/images/imagensBackend/to-do-list.jpg';  
 
-// Definição dos projetos com as imagens locais
 const projects = [
   {
     title: "API ReDocly Escolar",   
@@ -33,6 +32,14 @@ const projects = [
     technologies: " HTML, CSS, JavaScript, Docker, MySQL",  
     image: project3Image,
     viewCodeLink: "https://github.com/gMoraes1/projeto-dio-desafio",
+  },
+    {
+    title: "To do-lisst", 
+    date: "Agosto 2025 - Setembro 2025", 
+    description: "Aplicação web desenvolvida para gerenciamento de tarefas, permitindo que o usuário adicione, edite, conclua ou exclua atividades. O backend foi implementado em Python com FastAPI e o banco de dados utiliza PostgreSQL para persistência das informações. a aplicação inicia a partir de um docker compose que sobe separadamente os containers do PostgreSql, outro do FastApi com Python e o frontend com React",
+    technologies: " React, Vite, Python, FastApi, PostgreSQL, Docker, DockerCompose, Ci/cd",  
+    image: project4Image,
+    viewCodeLink: "https://github.com/gMoraes1/to-do-list-completed",
   }
 ];
 
