@@ -52,9 +52,9 @@ function AboutMe() {
       >
                Iniciei minha trajetória como desenvolvedor focado em front-end, mas atualmente estou direcionando minha carreira para back-end e DevOps. Por isso, organizei este portfólio para refletir essa evolução, com projetos divididos por área de atuação.
 
-      Tenho 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL, com atuação prática em Git, CI/CD, Docker, Kubernetes e React. Atualmente, estou aprofundando meus conhecimentos em AWS e práticas de Cloud Computing. <br></br>
+      Tenho mais de 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL, com atuação prática em Git, CI/CD, Docker, Kubernetes e React. Atualmente, estou aprofundando meus conhecimentos em AWS e práticas de Cloud Computing. <br></br>
 
-      Tenho desenvolvido projetos pessoais com Flask e FastAPI para criação de APIs RESTful, aplicando Docker e Docker Compose para conteinerização e orquestração.
+      Tenho desenvolvido projetos pessoais com FastAPI para criação de APIs RESTful e agora estou me aprofundando no ecossistema do Java com SpringBoot, aplicando Docker e Docker Compose para conteinerização e orquestração.
 
       Sou comunicativo, colaborativo e focado em resultados. Já participei de projetos com aplicação de Machine Learning, desenvolvendo soluções escaláveis, otimizando processos e criando relatórios que apoiaram a tomada de decisão do time.
       </Typography>
