@@ -43,7 +43,7 @@ function FooterDois() {
         Todos os direitos reservados. {currentYear}
       </Typography>
       <IconContainer>
-        <a href="https://www.linkedin.com/in/gustavo-moraes-4001542b8/" target="_blank" rel="noopener noreferrer">
+        <a href="www.linkedin.com/in/gustavo-moraes-dev" target="_blank" rel="noopener noreferrer">
           <LinkedInIcon fontSize="large" />
         </a>
         <a href="https://github.com/gMoraes1" target="_blank" rel="noopener noreferrer">
