@@ -31,7 +31,7 @@ function AboutMe() {
                 Experiência
               </Typography>
               <Typography variant="body2"  fontWeight="bold" fontSize= "17px">2 anos</Typography>
-              <Typography variant="body1"  fontWeight="bold" fontSize= "15px">Desenvolvimento full stack/ Devops</Typography>
+              <Typography variant="body1"  fontWeight="bold" fontSize= "15px">Desenvolvimento back end</Typography>
             </CardContent>
           </StyledCard>
         </Grid>
@@ -42,8 +42,8 @@ function AboutMe() {
               <Typography variant="h6" component="div">
                 Formação
               </Typography>
+              <Typography variant="body1" fontWeight="bold" fontSize= "17px">Engenharia de Software</Typography>
               <Typography variant="body1" fontWeight="bold" fontSize= "17px">Técnico em Desenvolvimento de Sistemas</Typography>
-              <Typography variant="body1" fontWeight="bold" fontSize= "17px">Programador</Typography>
             </CardContent>
           </StyledCard>
         </Grid>
