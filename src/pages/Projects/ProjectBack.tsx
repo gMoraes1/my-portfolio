@@ -5,7 +5,7 @@ import StyledButton from '../../components/StyledButton/StyledButton';
 
 import project1Image from '../../assets/images/imagensBackend/redoclyEscolar.jpeg';
 import project2Image from '../../assets/images/imagensBackend/Swagger.png';
-import project3Image from '../../assets/images/imagensBackend/formulario.png';
+import project3Image from '../../assets/images/imagensBackend/swaggerJobs.png';
 import project4Image from '../../assets/images/imagensBackend/to-do-list.jpg';  
 
 const projects = [
