@@ -26,12 +26,12 @@ const projects = [
     viewCodeLink: "https://github.com/gMoraes1/API-Filmes",
   },
   {
-    title: "Formulário de cadastro de informações", 
-    date: "Abril 2025 - Maio 2025", 
-    description: "Projeto desenvolvido onde foi criado um formulário para cadastrar o nome da pessoa e uma mensagem, usei Docker para criar o container e o MySQL para armazenar as informações",
-    technologies: " HTML, CSS, JavaScript, Docker, MySQL",  
+    title: "Job Monitor", 
+    date: "Dezembro 2025 - Janeiro 2026", 
+    description: "API REST pensada e desenvolvida em Java com Spring Boot para gerenciar e monitorar a execução de jobs/processos. O projeto foi criado com foco em boas práticas de arquitetura, uso de Spring Data JPA, validações, persistência de dados e organização em camadas.",
+    technologies: "Java, Spring Boot, Spring Data JPA,   Docker, MySQL",  
     image: project3Image,
-    viewCodeLink: "https://github.com/gMoraes1/projeto-dio-desafio",
+    viewCodeLink: "https://github.com/gMoraes1/Job-Monitor",
   },
     {
     title: "To do-lisst", 
