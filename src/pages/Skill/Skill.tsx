@@ -9,7 +9,7 @@ import SqlIcon from "@mui/icons-material/Storage";
 import StorageIcon from "@mui/icons-material/Storage"; // para Docker ou Kubernetes (temporariamente)
 import CloudIcon from "@mui/icons-material/Cloud";     // para Cloud
 import BuildIcon from "@mui/icons-material/Build";     // para CI/CD
-
+import { FaJava } from "react-icons/fa";
 
 const skills = [
   { label: "Javascript", icon: <JavascriptIcon /> },
@@ -22,9 +22,8 @@ const skills = [
   { label: "FastApi", icon: <SqlIcon /> },
   { label: "Docker", icon: <StorageIcon/> },
   { label: "Cloud", icon: <CloudIcon/> },
-  { label: "Kubernetes", icon: <StorageIcon/> },
+  { label: "Java", icon: <FaJava /> },
   { label: "CI/CD",icon: <BuildIcon/> },
-
 ];
 
 const StyledButton = styled(Button)(({ theme }) => ({
