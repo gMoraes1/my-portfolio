@@ -1,45 +1,56 @@
+import { AppBar, Box, MenuItem, Toolbar, styled } from "@mui/material";
+import { tokens } from "../../theme";
 
-import { AppBar, MenuItem, Toolbar, styled } from "@mui/material";
+const GlassToolbar = styled(Toolbar)(({ theme }) => ({
+  display: "flex",
+  justifyContent: "center",
+  gap: theme.spacing(2),
+  padding: theme.spacing(1),
+}));
 
-// Função de rolagem que lida com diferentes offsets
+const NavItem = styled(MenuItem)(({ theme }) => ({
+  borderRadius: 8,
+  fontWeight: 600,
+  transition: "color 0.25s ease, background-color 0.25s ease",
+  "&:hover": {
+    color: theme.palette.secondary.light,
+    backgroundColor: "rgba(255, 255, 255, 0.06)",
+  },
+}));
+
+const sections = [
+  { id: "about", label: "Sobre" },
+  { id: "skills", label: "Habilidades" },
+  { id: "projects", label: "Projetos" },
+];
+
 const NavBar = () => {
-    const StyledToobar = styled(Toolbar)(() => ({
-        display: "flex",
-        justifyContent: "space-evenly",
-        padding: "10px",
-        margin: "8px"
-    }));
+  const scrollToSection = (sectionId: string) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
-    // Função para rolar até a seção com um offset para ajustar a posição
-    const scrollToSection = (sectionId:string) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            let offset = 120;  // Offset padrão para About e Skills
-
-            // Definir um offset específico para "projects" se necessário
-            if (sectionId === "projects") {
-                offset = -220;  // Exemplo de valor diferente para "projects"
-            }
-
-            const sectionPosition = section.getBoundingClientRect().top + window.pageYOffset;
-            window.scrollTo({
-                top: sectionPosition - offset,  // Subtrai o offset da posição
-                behavior: 'smooth'  // Rolagem suave
-            });
-        }
-    };
-
-    return (
-        <>
-            <AppBar position="absolute">
-                <StyledToobar>
-                    <MenuItem onClick={() => scrollToSection('about')}>About</MenuItem>
-                    <MenuItem onClick={() => scrollToSection('skills')}>Skills</MenuItem>
-                    <MenuItem onClick={() => scrollToSection('projects')}>Projects</MenuItem>
-                </StyledToobar>
-            </AppBar>
-        </>
-    );
+  return (
+    <AppBar
+      position="fixed"
+      elevation={0}
+      sx={{
+        backgroundColor: "rgba(15, 15, 15, 0.55)",
+        backdropFilter: "blur(12px)",
+        WebkitBackdropFilter: "blur(12px)",
+        borderBottom: `1px solid ${tokens.border}`,
+      }}
+    >
+      <Box maxWidth="lg" width="100%" mx="auto">
+        <GlassToolbar>
+          {sections.map((section) => (
+            <NavItem key={section.id} onClick={() => scrollToSection(section.id)}>
+              {section.label}
+            </NavItem>
+          ))}
+        </GlassToolbar>
+      </Box>
+    </AppBar>
+  );
 };
 
 export default NavBar;
