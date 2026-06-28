@@ -1,6 +1,5 @@
 import { Button, Container, Grid, Typography, styled } from "@mui/material";
 import {
-  FaJava,
   FaReact,
   FaPython,
   FaGitAlt,
@@ -15,6 +14,7 @@ import {
   SiFastapi,
 } from "react-icons/si";
 import { MdAutorenew } from "react-icons/md";
+import { FaBrain } from "react-icons/fa6";
 
 const skills = [
   { label: "JavaScript", icon: <SiJavascript /> },
@@ -27,7 +27,7 @@ const skills = [
   { label: "FastAPI", icon: <SiFastapi /> },
   { label: "Docker", icon: <FaDocker /> },
   { label: "Cloud", icon: <FaAws /> },
-  { label: "Java", icon: <FaJava /> },
+  { label: "LLM", icon: <FaBrain /> },
   { label: "CI/CD", icon: <MdAutorenew /> },
 ];
 

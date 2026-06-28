@@ -58,26 +58,40 @@ const About = () => (
       ))}
     </Grid>
 
-    <Typography variant="h6" color="text.secondary" mt={6} lineHeight={1.8} maxWidth="md" mx="auto">
-      Iniciei minha trajetória como desenvolvedor focado em front-end, mas atualmente estou
-      direcionando minha carreira para back-end e DevOps. Por isso, organizei este portfólio para
-      refletir essa evolução, com projetos divididos por área de atuação.
-      <br />
-      <br />
-      Tenho mais de 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL,
-      com atuação prática em Git, CI/CD, Docker, Kubernetes e React. Atualmente, estou aprofundando
-      meus conhecimentos em AWS e práticas de Cloud Computing.
-      <br />
-      <br />
-      Tenho desenvolvido projetos pessoais com FastAPI para criação de APIs RESTful e agora estou me
-      aprofundando no ecossistema do Java com Spring Boot, aplicando Docker e Docker Compose para
-      conteinerização e orquestração.
-      <br />
-      <br />
-      Sou comunicativo, colaborativo e focado em resultados. Já participei de projetos com aplicação
-      de Machine Learning, desenvolvendo soluções escaláveis, otimizando processos e criando
-      relatórios que apoiaram a tomada de decisão do time.
-    </Typography>
+
+      ```tsx
+<Typography
+  variant="h6"
+  color="text.secondary"
+  mt={6}
+  lineHeight={1.8}
+  maxWidth="md"
+  mx="auto"
+>
+  Sou desenvolvedor de software com foco em Back-end, especializado no desenvolvimento de APIs, integração de sistemas e construção de soluções escaláveis utilizando Python.
+
+  <br />
+  <br />
+
+  Possuo mais de 1 ano de experiência profissional no desenvolvimento e manutenção de sistemas com Python e MySQL, participando da implementação de novas funcionalidades, automações, integrações entre sistemas e otimização de processos. Também tenho experiência prática com Git, Docker, Kubernetes, CI/CD e bancos de dados relacionais.
+
+  <br />
+  <br />
+
+  Nos meus projetos pessoais, desenvolvo aplicações utilizando FastAPI, PostgreSQL e SQLAlchemy, aplicando princípios de arquitetura de software, boas práticas de desenvolvimento, autenticação, documentação de APIs, conteinerização e ambientes de desenvolvimento com Docker.
+
+  <br />
+  <br />
+
+  Também venho explorando o uso de Inteligência Artificial Generativa por meio da integração de Large Language Models (LLMs) em aplicações reais, criando APIs capazes de consumir modelos de IA para automatizar recomendações, análises e fluxos inteligentes.
+
+  <br />
+  <br />
+
+  Atualmente estou aprofundando meus conhecimentos em arquitetura de software, Cloud Computing e AWS, buscando desenvolver soluções cada vez mais robustas, escaláveis e preparadas para ambientes de produção.
+</Typography>
+```
+
   </Container>
 );
 
