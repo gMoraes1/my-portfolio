@@ -1,67 +1,84 @@
+import { Card, CardContent, Container, Grid, Typography } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
+import { tokens } from "../../theme";
 
-import { Card, CardContent, Typography, Grid, Container } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import WorkIcon from '@mui/icons-material/Work';
-import SchoolIcon from '@mui/icons-material/School';
-
-const StyledCard = styled(Card)(({ theme }) => ({
-  backgroundColor: 'white',
-  color: theme.palette.primary.main,
-  transition: 'background-color 0.3s, color 0.3s',
-  '&:hover': {
-    backgroundColor: theme.palette.secondary.main,
-    color: 'white',
+const GlassCard = styled(Card)(() => ({
+  height: "100%",
+  textAlign: "center",
+  padding: "8px",
+  backgroundColor: tokens.surfaceGlass,
+  backdropFilter: "blur(14px)",
+  WebkitBackdropFilter: "blur(14px)",
+  border: `1px solid ${tokens.border}`,
+  transition: "transform 0.3s ease, border-color 0.3s ease",
+  "&:hover": {
+    transform: "translateY(-6px)",
+    borderColor: tokens.borderHover,
   },
 }));
 
-function AboutMe() {
-  return (
-    <div id="about">
-    <Container maxWidth="lg" >
-    <div style={{ padding: '10px'}}>
-      <Typography variant="h2" align="center"  marginTop='200px' padding='10px'>
-        Sobre mim
-      </Typography>
-      <Grid container spacing={3} justifyContent="center" padding='20px'>
-        <Grid item xs={12} sm={6} md={4}>
-          <StyledCard>
+const highlights = [
+  {
+    Icon: WorkIcon,
+    title: "Experiência",
+    lines: ["2 anos", "Desenvolvimento back end"],
+  },
+  {
+    Icon: SchoolIcon,
+    title: "Formação",
+    lines: ["Engenharia de Software", "Técnico em Desenvolvimento de Sistemas"],
+  },
+];
+
+const About = () => (
+  <Container id="about" maxWidth="lg" sx={{ py: 12 }}>
+    <Typography variant="h2" align="center" mb={6}>
+      Sobre mim
+    </Typography>
+
+    <Grid container spacing={4} justifyContent="center">
+      {highlights.map(({ Icon, title, lines }) => (
+        <Grid item xs={12} sm={6} md={4} key={title}>
+          <GlassCard elevation={0}>
             <CardContent>
-              <WorkIcon style={{ fontSize: 40 }} />
-              <Typography variant="h6" component="div">
-                Experiência
+              <Icon sx={{ fontSize: 44, color: "secondary.light" }} />
+              <Typography variant="h6" mt={1}>
+                {title}
               </Typography>
-              <Typography variant="body2"  fontWeight="bold" fontSize= "17px">2 anos</Typography>
-              <Typography variant="body1"  fontWeight="bold" fontSize= "15px">Desenvolvimento back end</Typography>
+              {lines.map((line) => (
+                <Typography key={line} variant="body1" fontWeight={600} color="text.secondary">
+                  {line}
+                </Typography>
+              ))}
             </CardContent>
-          </StyledCard>
+          </GlassCard>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
-          <StyledCard>
-            <CardContent>
-              <SchoolIcon style={{ fontSize: 40 }} />
-              <Typography variant="h6" component="div">
-                Formação
-              </Typography>
-              <Typography variant="body1" fontWeight="bold" fontSize= "17px">Engenharia de Software</Typography>
-              <Typography variant="body1" fontWeight="bold" fontSize= "17px">Técnico em Desenvolvimento de Sistemas</Typography>
-            </CardContent>
-          </StyledCard>
-        </Grid>
-      </Grid>
-      <Typography color="primary" variant="h5" marginTop="40px" padding="20px"
-      >
-               Iniciei minha trajetória como desenvolvedor focado em front-end, mas atualmente estou direcionando minha carreira para back-end e DevOps. Por isso, organizei este portfólio para refletir essa evolução, com projetos divididos por área de atuação.
+      ))}
+    </Grid>
 
-      Tenho mais de 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL, com atuação prática em Git, CI/CD, Docker, Kubernetes e React. Atualmente, estou aprofundando meus conhecimentos em AWS e práticas de Cloud Computing. <br></br>
+    <Typography variant="h6" color="text.secondary" mt={6} lineHeight={1.8} maxWidth="md" mx="auto">
+      Iniciei minha trajetória como desenvolvedor focado em front-end, mas atualmente estou
+      direcionando minha carreira para back-end e DevOps. Por isso, organizei este portfólio para
+      refletir essa evolução, com projetos divididos por área de atuação.
+      <br />
+      <br />
+      Tenho mais de 1 ano de experiência em desenvolvimento de sistemas utilizando Python e MySQL,
+      com atuação prática em Git, CI/CD, Docker, Kubernetes e React. Atualmente, estou aprofundando
+      meus conhecimentos em AWS e práticas de Cloud Computing.
+      <br />
+      <br />
+      Tenho desenvolvido projetos pessoais com FastAPI para criação de APIs RESTful e agora estou me
+      aprofundando no ecossistema do Java com Spring Boot, aplicando Docker e Docker Compose para
+      conteinerização e orquestração.
+      <br />
+      <br />
+      Sou comunicativo, colaborativo e focado em resultados. Já participei de projetos com aplicação
+      de Machine Learning, desenvolvendo soluções escaláveis, otimizando processos e criando
+      relatórios que apoiaram a tomada de decisão do time.
+    </Typography>
+  </Container>
+);
 
-      Tenho desenvolvido projetos pessoais com FastAPI para criação de APIs RESTful e agora estou me aprofundando no ecossistema do Java com SpringBoot, aplicando Docker e Docker Compose para conteinerização e orquestração.
-
-      Sou comunicativo, colaborativo e focado em resultados. Já participei de projetos com aplicação de Machine Learning, desenvolvendo soluções escaláveis, otimizando processos e criando relatórios que apoiaram a tomada de decisão do time.
-      </Typography>
-    </div>
-    </Container>
-    </div>
-  );
-}
-
-export default AboutMe;
+export default About;
