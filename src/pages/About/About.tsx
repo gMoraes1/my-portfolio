@@ -59,7 +59,6 @@ const About = () => (
     </Grid>
 
 
-      ```tsx
 <Typography
   variant="h6"
   color="text.secondary"
@@ -90,7 +89,6 @@ const About = () => (
 
   Atualmente estou aprofundando meus conhecimentos em arquitetura de software, Cloud Computing e AWS, buscando desenvolver soluções cada vez mais robustas, escaláveis e preparadas para ambientes de produção.
 </Typography>
-```
 
   </Container>
 );
